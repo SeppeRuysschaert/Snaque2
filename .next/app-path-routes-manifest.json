@@ -1,0 +1,17 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/api/order/email/route": "/api/order/email",
+  "/favicon.ico/route": "/favicon.ico",
+  "/api/contact/route": "/api/contact",
+  "/broodjes/add/[id]/page": "/broodjes/add/[id]",
+  "/contact/page": "/contact",
+  "/desserts/page": "/desserts",
+  "/broodjes/page": "/broodjes",
+  "/cart/page": "/cart",
+  "/page": "/",
+  "/pasta/page": "/pasta",
+  "/order/page": "/order",
+  "/pasta/add/page": "/pasta/add",
+  "/soepen/page": "/soepen",
+  "/pasta/special/[id]/page": "/pasta/special/[id]"
+}
