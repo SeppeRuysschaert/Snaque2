@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root{
+  --snaque-blue:#1800ad;
+  --snaque-blue-700:#0f0070;
+  --snaque-beige:#f4f5d3;
+  --panel:#0d1117;
+  --panel-border: rgba(255,255,255,.08);
+}
+
+/* pagina-achtergrond */
+html,body{
+  background:
+    radial-gradient(1200px 600px at 20% -10%, rgba(24,0,173,.24), transparent 60%),
+    radial-gradient(900px 500px at 80% -10%, rgba(24,0,173,.18), transparent 60%),
+    #030712;
+}
+
+/* generieke panel look */
+.panel {
+  @apply rounded-3xl border border-white/10 bg-white/5 ring-1 ring-black/20;
+}
+
+.btn-snaque{
+  @apply inline-flex items-center justify-center gap-2 rounded-md px-3 py-1.5 text-sm font-semibold ring-1 transition;
+  color: #0b0f2a;
+  background: var(--snaque-beige);
+  border-color: color-mix(in srgb, var(--snaque-blue) 20%, transparent);
+}
+.btn-snaque:hover{
+  background: color-mix(in srgb, var(--snaque-beige) 88%, white);
+}
+.btn-snaque:focus-visible{
+  outline: none;
+  box-shadow: 0 0 0 2px var(--snaque-beige), 0 0 0 6px color-mix(in srgb, var(--snaque-blue) 60%, transparent);
+}
+
+.badge-snaque{
+  @apply inline-flex items-center rounded-md px-2 py-1 text-xs font-medium ring-1;
+  color: var(--snaque-beige);
+  background: color-mix(in srgb, var(--snaque-blue) 35%, transparent);
+  border-color: color-mix(in srgb, white 15%, transparent);
+}
