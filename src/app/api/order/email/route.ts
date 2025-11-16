@@ -12,7 +12,7 @@ const {
   ORDER_EMAIL_FROM,
 } = process.env;
 
-const PASTA_SLOTS = new Set(["11:30", "12:00", "12:30", "13:00"]);
+const PASTA_SLOTS = new Set(["17:30", "18:30"]);
 const SIZE_SET = new Set(["small", "medium", "large"]);
 const CHEESE_SET = new Set(["met", "zonder"]);
 

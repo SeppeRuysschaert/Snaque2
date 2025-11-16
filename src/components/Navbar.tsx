@@ -16,12 +16,7 @@ export default function Navbar() {
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
-  const links = [
-    { href: "/broodjes", label: "Broodjes" },
-    
-    { href: "/pasta", label: "Pasta's" },
-    { href: "/desserts", label: "Desserts" },
-  ];
+  const links = [{ href: "/pasta", label: "Pasta's" }];
 
   const go = (href: string) => {
     router.push(href);
@@ -71,12 +66,15 @@ export default function Navbar() {
                   className="px-2 py-1 rounded-md transition-colors ring-1"
                   style={{
                     color: active ? BEIGE : "#e5e7eb",
-                    backgroundColor: active ? "rgba(244,245,211,.08)" : "transparent",
+                    backgroundColor: active
+                      ? "rgba(244,245,211,.08)"
+                      : "transparent",
                     borderColor: "rgba(255,255,255,.10)",
                   }}
                   onMouseEnter={(e) => {
                     if (!active)
-                      e.currentTarget.style.backgroundColor = "rgba(244,245,211,.06)";
+                      e.currentTarget.style.backgroundColor =
+                        "rgba(244,245,211,.06)";
                     e.currentTarget.style.color = BEIGE;
                   }}
                   onMouseLeave={(e) => {
@@ -180,7 +178,8 @@ export default function Navbar() {
                         "rgba(244,245,211,.06)")
                     }
                     onMouseLeave={(e) => {
-                      if (!active) e.currentTarget.style.backgroundColor = "transparent";
+                      if (!active)
+                        e.currentTarget.style.backgroundColor = "transparent";
                     }}
                   >
                     {l.label}
@@ -194,7 +193,8 @@ export default function Navbar() {
                 className="w-full text-left px-3 py-2 rounded-lg transition-colors ring-1"
                 style={{ color: BEIGE, borderColor: "rgba(255,255,255,.10)" }}
                 onMouseEnter={(e) =>
-                  (e.currentTarget.style.backgroundColor = "rgba(244,245,211,.06)")
+                  (e.currentTarget.style.backgroundColor =
+                    "rgba(244,245,211,.06)")
                 }
                 onMouseLeave={(e) =>
                   (e.currentTarget.style.backgroundColor = "transparent")
@@ -209,7 +209,8 @@ export default function Navbar() {
                 className="w-full text-left px-3 py-2 rounded-lg transition-colors ring-1"
                 style={{ color: BEIGE, borderColor: "rgba(255,255,255,.10)" }}
                 onMouseEnter={(e) =>
-                  (e.currentTarget.style.backgroundColor = "rgba(244,245,211,.06)")
+                  (e.currentTarget.style.backgroundColor =
+                    "rgba(244,245,211,.06)")
                 }
                 onMouseLeave={(e) =>
                   (e.currentTarget.style.backgroundColor = "transparent")
@@ -279,21 +280,49 @@ function CartCountBadge({
 /* Icons */
 function IconHamburger() {
   return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    <svg
+      width="22"
+      height="22"
+      viewBox="0 0 24 24"
+      fill="none"
+      aria-hidden="true"
+    >
+      <path
+        d="M4 6h16M4 12h16M4 18h16"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
     </svg>
   );
 }
 function IconClose() {
   return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path d="M6 6l12 12M18 6l-12 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    <svg
+      width="22"
+      height="22"
+      viewBox="0 0 24 24"
+      fill="none"
+      aria-hidden="true"
+    >
+      <path
+        d="M6 6l12 12M18 6l-12 12"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
     </svg>
   );
 }
 function IconCart() {
   return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <svg
+      width="22"
+      height="22"
+      viewBox="0 0 24 24"
+      fill="none"
+      aria-hidden="true"
+    >
       <path
         d="M3 5h2l2.2 10.2A2 2 0 0 0 9.15 17h7.7a2 2 0 0 0 1.95-1.8l1.05-7.35H6.35"
         stroke="currentColor"

@@ -9,10 +9,10 @@ export type PastaItem = {
   sauces?: string[]; // enkel gebruikt voor 'gewone' pasta (customizer toont 1–2)
 };
 
-export const PASTA_TIMESLOTS = ["11:30", "12:00", "12:30", "13:00"] as const;
+export const PASTA_TIMESLOTS = ["17:30", "18:30"] as const;
 export type PastaTimeslot = (typeof PASTA_TIMESLOTS)[number];
 
-export const PRICE_BY_SIZE = { small: 6.00, medium: 8.00, large: 10.00 } as const;
+export const PRICE_BY_SIZE = { small: 7.00, medium: 9.00, large: 11.00 } as const;
 export const PRICE_BY_SIZE_SPECIAL = { small: 8.00, medium: 10.00, large: 12.00}
 
 export const COMMON_SAUCES = [

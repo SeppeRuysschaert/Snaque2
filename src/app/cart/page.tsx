@@ -12,7 +12,7 @@ import {
   type CartItem,
 } from "@/lib/cart";
 
-const SLOT_VALUES = ["11:30", "12:00", "12:30", "13:00"] as const;
+const SLOT_VALUES = ["17:30", "18:30"] as const;
 const SIZE_VALUES = ["small", "medium", "large"] as const;
 const CHEESE_VALUES = ["met", "zonder"] as const;
 
@@ -167,7 +167,7 @@ export default function Cart() {
           </header>
 
           {items.length === 0 ? (
-            <EmptyState onBack={() => router.push("/broodjes")} />
+            <EmptyState onBack={() => router.push("/pasta")} />
           ) : (
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-6">
               {/* Items lijst */}
@@ -339,7 +339,7 @@ export default function Cart() {
                 <div className="mt-5 space-y-2">
                   <button
                     type="button"
-                    onClick={() => router.push("/broodjes")}
+                    onClick={() => router.push("/pasta")}
                     className="w-full btn-ghost"
                   >
                     Verder winkelen
@@ -383,7 +383,7 @@ function EmptyState({ onBack }: { onBack: () => void }) {
         onClick={onBack}
         className="mt-4 btn-ghost"
       >
-        Naar Broodjes
+        Naar Pasta's
       </button>
     </div>
   );

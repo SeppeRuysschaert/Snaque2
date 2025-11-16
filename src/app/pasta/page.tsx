@@ -1,7 +1,6 @@
 // app/pasta/page.tsx
 import Pasta from "@/components/pasta/Pasta";
-import SpecialPasta from "@/components/pasta/SpecialPasta";
-import { PASTA_LIST, SPECIAL_PASTA_LIST } from "@/data/pasta";
+import { PASTA_LIST } from "@/data/pasta";
 import Link from "next/link";
 
 export default function PastaPage() {
@@ -9,9 +8,22 @@ export default function PastaPage() {
     <main className="mx-auto max-w-4xl px-4 py-8 space-y-10">
       <section>
         <h1 className="text-2xl font-semibold text-slate-100">Sauzen</h1>
+
+        {/* Subtiele maar duidelijke event-info */}
+        <p className="mt-2 text-sm text-slate-300">
+          📅 Het pasta-evenement vindt plaats op{" "}
+          <span className="font-medium text-slate-100">
+            maandag 8 december van 16u tot 19u
+          </span>
+          . Zorg dat je bestelling tijdig binnen is.
+        </p>
+
         <ul className="mt-4 grid sm:grid-cols-2 gap-4">
-          {PASTA_LIST.map((p) => <Pasta key={p.id} item={p} />)}
+          {PASTA_LIST.map((p) => (
+            <Pasta key={p.id} item={p} />
+          ))}
         </ul>
+
         <div className="pt-4 flex justify-end">
           <Link
             href="/pasta/add"
@@ -21,15 +33,6 @@ export default function PastaPage() {
           </Link>
         </div>
       </section>
-
-      {SPECIAL_PASTA_LIST.length > 0 && (
-        <section>
-          <h2 className="text-xl font-semibold text-slate-100">Specials</h2>
-          <ul className="mt-4 grid sm:grid-cols-2 gap-4">
-            {SPECIAL_PASTA_LIST.map((p) => <SpecialPasta key={p.id} item={p} />)}
-          </ul>
-        </section>
-      )}
     </main>
   );
 }
